@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\claim;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,8 +23,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+         $claims = Claim::orderBy('id','DESC')->paginate(5);
+        return view('home',compact('claims'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 }

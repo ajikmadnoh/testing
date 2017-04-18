@@ -24,12 +24,7 @@ class ClaimController extends Controller
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
-    public function claim(Request $request)
-    {
-        $claims = Claim::orderBy('id','DESC')->paginate(5);
-        return view('Claim.listClaim',compact('claims'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);
-    }
+   
 
 
     /**

@@ -10,9 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/welcome', 'ListController@show');
-Route::get('Claim/{Claim}', 
-[ 'as' => 'Claim', 'uses' => 'ClaimController@claim']) ;
+
 Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('contact', 
@@ -30,3 +28,4 @@ Route::get('/', [
 }]);
 
 
+Route::get('/listClaim', 'ListController@claim');
