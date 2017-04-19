@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,6 +9,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\Http\Requests;
+use App\claim;
+use Illuminate\Http\Request;
+
 
 Route::auth();
 Route::get('/home', 'HomeController@index');
@@ -23,9 +26,11 @@ Route::resource('Claim','ClaimController');
 
 Route::get('/', [
   'middleware' => ['auth'],
-  'uses' => function () {
-   return view('home');
+  'uses' => function (Request $request) {
+   $claims = Claim::orderBy('id','DESC')->paginate(5);
+        return view('home',compact('claims'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
 }]);
 
 
-Route::get('/listClaim', 'ListController@claim');
+Route::get('Claim//listClaim', 'ClaimController@claim');
