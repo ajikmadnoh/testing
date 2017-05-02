@@ -8,7 +8,7 @@
                 <h2>Individual </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-danger" href="{{ url('Claim/listClaim') }}"> Show all Claim</a>
+                <a class="btn btn-danger" href="{{ url('/listClaim') }}"> Show all Claim</a>
                 <a class="btn btn-success" href="{{ route('Claim.create') }}"> Create New Claim</a>
             </div>
         </div>

@@ -21,7 +21,7 @@
 
                     <br><hr>
 
-                    <table class="table table-bordered">
+            <table class="table table-bordered">
                     <h3>Tasks</h3>
                             
                         <th width="2px"> No </th> <th> Details </th> <th width="15px"> Creator </th> <th width="15px"> Receiver </th>  <th width="15px"> Status </th> 

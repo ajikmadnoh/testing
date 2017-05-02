@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\claim;
 use App\Http\Requests;
 
-class BookKeepController extends Controller
+class StoreKeepController extends Controller
 {
     public function __construct()
     {

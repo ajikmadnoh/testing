@@ -77,7 +77,7 @@
                         </a>
 
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ url('/storekeep') }}"><i class="fa fa-btn fa-gear"></i>Store Keep (hardware)</a></li>
+                        <li><a href="{{ url('/StoreKeep') }}"><i class="fa fa-btn fa-gear"></i>Store Keep (hardware)</a></li>
                         <li><a href="{{ url('/BookKeep') }}"><i class="fa fa-btn fa-book"></i>Book Keep (License)</a></li>
                         <li><a href="{{ url('/ItemCRUD') }}"><i class="fa fa-btn fa-book"></i>CRUD</a></li>
 
@@ -101,7 +101,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/UserProfile') }}"><i class="fa fa-btn fa-male"></i>User Profile</a></li>
+                                <li><a href="{{ url('/ProfilPengguna') }}"><i class="fa fa-btn fa-male"></i>User Profile</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
 
                             </ul>

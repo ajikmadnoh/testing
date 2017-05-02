@@ -20,7 +20,10 @@ Route::get('contact',
   ['as' => 'contact', 'uses' => 'AboutController@create']);
 Route::post('contact', 
   ['as' => 'contact_store', 'uses' => 'AboutController@store']);
-Route::get('/BookKeep', 'BookKeepController@index');
+
+Route::resource('ProfilPengguna','ProfilPenggunaController');
+Route::resource('BookKeep','BookKeepController');
+Route::resource('StoreKeep','StoreKeepController');
 Route::resource('ItemCRUD','ItemCRUDController');
 Route::resource('Claim','ClaimController');
 
@@ -33,4 +36,4 @@ Route::get('/', [
 }]);
 
 
-Route::get('Claim//listClaim', 'ClaimController@claim');
+Route::get('/listClaim', 'ListController@claim');
