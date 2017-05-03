@@ -62,13 +62,21 @@
                 </ul>
 
                 <ul class="nav navbar-nav">
+                   <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/projects') }}">Projects</a></li>
+                </ul>
+
+                </ul>
+
+                <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Finance <span class="caret"></span>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Finances <span class="caret"></span>
                         </a>
 
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ url('/Claim') }}"><i class="fa fa-btn fa-money"></i>Claim</a></li>
                     </ul>
+                    </li>
                 </ul>
 
                 <ul class="nav navbar-nav">

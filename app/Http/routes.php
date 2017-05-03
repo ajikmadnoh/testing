@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 
 Route::auth();
 Route::get('/home', 'HomeController@index');
+Route::get('/projects', 'ProjectsController@index');
 Route::get('contact', 
   ['as' => 'contact', 'uses' => 'AboutController@create']);
 Route::post('contact', 
